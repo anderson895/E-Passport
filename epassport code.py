@@ -680,9 +680,12 @@ entry43.grid(row=42, column=1, padx=378, sticky="W")
 
 
 
-gender_var = tk.StringVar()
+gender_var = tk.StringVar(value="Male")  # Default to "Male"
+
+# Radiobuttons for gender selection
 tk.Radiobutton(scrollable_frame, text="Male", variable=gender_var, value="Male").grid(row=18, column=1, padx=380, sticky="W")
 tk.Radiobutton(scrollable_frame, text="Female", variable=gender_var, value="Female").grid(row=18, column=1, padx=480, sticky="W")
+
 
 # Date dropdown variables for Date of Birth
 current_year = datetime.now().year
