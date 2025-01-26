@@ -94,7 +94,7 @@ def show_review_window(review_message, data):
         review_window.destroy()  # Close the review window
 
     # Add Close button
-    close_button = tk.Button(review_window, text="Close", command=close_review_window)
+    close_button = tk.Button(review_window, text="Update", command=close_review_window)
     close_button.pack(side=tk.LEFT, padx=10, pady=10)
 
     # Add Save button
@@ -724,9 +724,9 @@ year_var_app.set(current_year)
 
 
 
-# Initialize the Submit button as NORMAL
+# Initialize the Submit button as DISABLED
 submit_button = tk.Button(scrollable_frame, text="Submit", font=("Times New Roman", 10, 'bold'),
-                          bg="green", fg="white", command=submit, state=tk.NORMAL)
+                          bg="green", fg="white", command=submit, state=tk.DISABLED)
 submit_button.grid(row=55, column=1, padx=450, sticky="w")
 
 def validate_form():
@@ -784,7 +784,7 @@ def validate_form():
     if all(field for field in required_fields):
         submit_button.config(state=tk.NORMAL)  # Enable the button
     else:
-        submit_button.config(state=tk.NORMAL)  # Disable the button
+        submit_button.config(state=tk.DISABLED)  # Disable the button
 
     
 
